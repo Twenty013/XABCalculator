@@ -79,6 +79,30 @@ function calculatePrice() {
     document.getElementById('totalPrice').textContent = totalPrice;
 }
 
+function ResetValues() {
+    // Скидаємо значення змінних
+    extraBarrels = 0;
+    priority1 = 0;
+    priority2 = 0;
+    negpriority = 0;
+    basePrice = baseShopPrice;
+
+    // Скидаємо значення в input полях
+    document.getElementById('barrels').value = '0';
+    document.getElementById('priority1').value = '0';
+    document.getElementById('priority2').value = '0';
+    document.getElementById('priorityNegative1').value = '0';
+
+    // Скидаємо тип магазину на значення за замовчуванням
+    document.getElementById('shopType').value = 'shop';
+
+    // Оновлюємо відображення базової ціни
+    document.getElementById('basePrice').textContent = basePrice;
+
+    // Перераховуємо загальну ціну
+    calculatePrice();
+}
+
 // Додайте обробники змін на input полях
 const barrelsInput = document.getElementById('barrels');
 const priority1Input = document.getElementById('priority1');
