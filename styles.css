@@ -1,0 +1,127 @@
+/* Підключення шрифта */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #1c1c1c;
+    color: #e6e6e6;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 25rem;
+    margin: 2.5rem auto;
+    padding: 1.875rem;
+    background-color: #2a2a2a;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.2);
+}
+
+.text-container {
+    display: flex;
+    justify-content: flex-end; /* Вирівнюємо контейнер по правому краю */
+    margin-top: 20px;
+}
+
+p {
+    text-align: left; /* Вирівнюємо текст ліворуч */
+}
+
+h2 {
+    color: #FF6B00;
+    margin-bottom: 1.25rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+
+.field {
+    margin-bottom: 1.25rem;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.3125rem;
+}
+
+.input {
+    -moz-appearance: textfield;
+    width: 4.375rem;
+    padding: 0.625rem;
+    border: 1px solid #555;
+    border-radius: 0.375rem;
+    text-align: center;
+    background-color: #333;
+    color: #e6e6e6;
+    font-size: 1rem;
+}
+
+.field select {
+    width: 100%;
+    padding: 0.625rem;
+    border: 1px solid #555;
+    border-radius: 0.375rem;
+    background-color: #333;
+    color: #e6e6e6;
+    font-size: 1rem;
+    font-family: 'Poppins', Arial, sans-serif;
+    appearance: none;
+}
+
+.field select:focus {
+    outline: none;
+    border-color: #FF6B00;
+}
+
+.field select {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath fill='%23e6e6e6' d='M0 0l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.625rem center;
+    background-size: 0.75rem;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+button {
+    background-color: #FF6B00;
+    border: none;
+    color: white;
+    padding: 0.625rem 0.9375rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.375rem;
+    cursor: pointer;
+}
+
+.result {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fd8a38;
+    text-align: right;
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 80%;
+        margin: 1.25rem auto;
+        padding: 1.25rem;
+        border-radius: 0.5rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .input {
+        width: 60%;
+    }
+
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор оренди</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<body>
+<div class="container">
+
+    <h2>Калькулятор оренди за тиждень</h2>
+    <div class="field">
+        <label>Тип магазину:</label>
+        <select id="shopType" onchange="updateBasePrice()">
+            <option value="stand">Cтенд (5 бочок)</option>
+            <option value="shop" selected>Магазин (6 бочок)</option>
+        </select>
+    </div>
+
+    <div class="field">
+        <label>Базова ціна: <span id="basePrice">48</span></label>
+    </div>
+
+    <div class="field">
+        <label>Додаткові бочки (8нз/шт):</label>
+        <button onclick="updateBarrels(-1)">-</button>
+        <input type="number" id="barrels" class="input" value="0" min="0" oninput="updateBarrels(0)">
+        <button onclick="updateBarrels(1)">+</button>
+    </div>
+
+    <div class="field">
+        <label>Предметів з 1 пріоритетом (-15%):</label>
+        <button onclick="updatePriority1(-1)">-</button>
+        <input type="number" class="input" id="priority1" value="0" min="0" oninput="updatePriority1(0)">
+        <button onclick="updatePriority1(1)">+</button>
+    </div>
+
+    <div class="field">
+        <label>Предметів з 2 пріоритетом (-10%):</label>
+        <button onclick="updatePriority2(-1)">-</button>
+        <input type="number" class="input" id="priority2" value="0" min="0" oninput="updatePriority2(0)">
+        <button onclick="updatePriority2(1)">+</button>
+    </div>
+
+    <div class="field">
+        <label for="priorityNegative1"> Предметів з -1 пріоритетом (+15%):</label>
+        <button onclick="updateNegPriority(-1)">-</button>
+        <input type="number" class="input"  id="priorityNegative1" value="0" min="0" oninput="updateNegPriority(0)" />
+        <button onclick="updateNegPriority(1)">+</button>
+    </div>
+
+    <div class="field result">
+        Загальна ціна: <span id="totalPrice">48</span> н.з.
+    </div>
+    <div class="text-container">
+        <p>Made by Twenty</p>
+    </div>
+</div>
+
+</body>
+</html>
