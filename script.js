@@ -73,7 +73,7 @@ function calculatePrice() {
     let totalPrice = basePrice;
     totalPrice += barrels * barrelPrice;
     totalPrice -= int_percent(totalPrice, priority1 * 15);
-    totalPrice -= int_percent(totalPrice, priority2 * 15);
+    totalPrice -= int_percent(totalPrice, priority2 * 10);
     totalPrice += int_percent(totalPrice, priorityNegative1 * 15);
     if (totalPrice < 5) totalPrice = 5;
     document.getElementById('totalPrice').textContent = totalPrice;
