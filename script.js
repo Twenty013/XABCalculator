@@ -102,7 +102,7 @@ function ResetValues() {
     // Перераховуємо загальну ціну
     calculatePrice();
 }
-
+//пасхалка
 // Додайте обробники змін на input полях
 const barrelsInput = document.getElementById('barrels');
 const priority1Input = document.getElementById('priority1');
